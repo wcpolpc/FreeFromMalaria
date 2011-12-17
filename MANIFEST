@@ -30,9 +30,9 @@ MANIFEST
 activity/mosquito.svg
 activity/activity.info
 activity/mosquito.svg~
-glade/welcomeScreen.glade
-glade/comicScreen.glade
-glade/quizScreen.glade
+glade/welcomeScreen.ui
+glade/comicScreen.ui
+glade/quizScreen.ui
 
 activity.py
 images/10.jpg

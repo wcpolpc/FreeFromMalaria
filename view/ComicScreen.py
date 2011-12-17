@@ -16,7 +16,7 @@
 # Original author: World Class Project www.worldclassproject.org.uk
 
 import gtk
-import gtk.glade
+#import gtk.glade
 import gtk.gdk 
 import time;
 import gobject;
@@ -43,16 +43,16 @@ class MyComicScreen():
 		self.controller=controller;
 		
 				   
-				
+		self.xml=gtk.Builder();		
 				
 		##init the background image buffer
 	
 		
 		# Load Glade XML
-		self.xml = gtk.glade.XML("glade/comicScreen.glade")
+		self.xml.add_from_file("glade/comicScreen.ui")
 		
 		# Get Window
-		self.w = self.xml.get_widget('window1')
+		self.w = self.xml.get_object('window1')
 	   
 		#self.w.connect("delete_event", gtk.main_quit)
 		
@@ -68,9 +68,9 @@ class MyComicScreen():
 		self.bgpixbuf = gtk.gdk.pixbuf_new_from_file("images/1.jpg")
 		
 		##set up the drawing area
-		self.draw = self.xml.get_widget('draw');
+		self.draw = self.xml.get_object('draw');
 		self.draw.connect("expose-event", self.expose)
-		self.vbox= self.xml.get_widget('vbox1');
+		self.vbox= self.xml.get_object('vbox1');
 		white = gtk.gdk.color_parse("white")
 
 	   
@@ -78,7 +78,7 @@ class MyComicScreen():
 		
 		self.scene_index= 0;
 		
-		self.label = self.xml.get_widget('label')
+		self.label = self.xml.get_object('label')
 	   # self.label.set_markup("<span size='10000'>"+self.text[self.scene_index]+"</span>");
 		
 		self.vbox.remove(self.label)

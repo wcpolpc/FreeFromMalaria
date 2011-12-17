@@ -16,7 +16,7 @@
 # Original author: World Class Project www.worldclassproject.org.uk
 
 import gtk
-import gtk.glade
+
 
 from gettext import gettext as _
 class GameWelcomeScreen():
@@ -31,11 +31,16 @@ class GameWelcomeScreen():
         
       
               
+        self.xml=gtk.Builder();        
+                
+        ##init the background image buffer
+    
+        
         # Load Glade XML
-        self.xml = gtk.glade.XML("glade/welcomeScreen.glade")
+        self.xml.add_from_file("glade/welcomeScreen.ui")
         
         # Get Window
-        self.w = self.xml.get_widget('window1')
+        self.w = self.xml.get_object('window1')
         #self.w.connect("delete_event", gtk.main_quit)
         
         # Get Windows child
@@ -50,30 +55,33 @@ class GameWelcomeScreen():
         self.controller=controll
         
         #Sound toggle button
+        
+        self.play_button=self.xml.get_object('versionlabel')
+        self.play_button.set_label('v 4.1a')
 
 
         
-        self.play_button=self.xml.get_widget('play')
+        self.play_button=self.xml.get_object('play')
         self.playlabela=_('Play the Game')
         self.play_button.set_label(self.playlabela)
         self.play_button.connect("button_press_event", self.comic_press_event)
         
-#        self.map_button=self.xml.get_widget('maps')
+#        self.map_button=self.xml.get_object('maps')
 #        self.map_button.connect("button_press_event", self.map_press_event)
 
        
-        self.options=self.xml.get_widget('optionslabel')
+        self.options=self.xml.get_object('optionslabel')
         options=(_('Options'));
         self.options.set_text(options);
             
 
-        self.play_label=self.xml.get_widget('playlabel')
+        self.play_label=self.xml.get_object('playlabel')
         playlabel=_('Play the Game')
         self.play_label.set_text(playlabel)
         
 
         
-        self.lang_label=self.xml.get_widget('languagelabel')
+        self.lang_label=self.xml.get_object('languagelabel')
         lang_label=_('Current language:')
         self.lang_label.set_text(lang_label+self.controller.get_current_user_selection())
         
@@ -81,7 +89,7 @@ class GameWelcomeScreen():
         self.prepare_language_drop()
         
     def prepare_language_drop(self):
-        self.combo=self.xml.get_widget('languagecombo')
+        self.combo=self.xml.get_object('languagecombo')
        
         #load the approved list of languages
 

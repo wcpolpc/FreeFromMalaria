@@ -15,7 +15,7 @@
 #
 # Original author: World Class Project www.worldclassproject.org.uk
 import gtk
-import gtk.glade
+#import gtk.glade
 import random;
 
 from gettext import gettext as _
@@ -31,11 +31,16 @@ class GameQuizScreen():
         ##get the contoller  
         self.controller=cont
               
+        self.xml=gtk.Builder();        
+                
+        ##init the background image buffer
+    
+        
         # Load Glade XML
-        self.xml = gtk.glade.XML("glade/quizScreen.glade")
+        self.xml.add_from_file("glade/quizScreen.glade")
         
         # Get Window
-        self.w = self.xml.get_widget('window1')
+        self.w = self.xml.get_object('window1')
         #self.w.connect("delete_event", gtk.main_quit)
         
         # Get Windows child
@@ -45,11 +50,11 @@ class GameQuizScreen():
         self.widget = self.w_child
       
        
-        self.continue_button= self.xml.get_widget('continue');
+        self.continue_button= self.xml.get_object('continue');
         self.continue_button.set_sensitive(False);
         self.continue_button.connect("button_press_event", self.continue_game)
         
-        self.previous_button= self.xml.get_widget('previous');
+        self.previous_button= self.xml.get_object('previous');
         self.previous_button.connect("button_press_event", self.return_game)
       
         
@@ -64,7 +69,7 @@ class GameQuizScreen():
     def get_window(self):
         return self.w
     def prepare_questions(self):
-        question = self.xml.get_widget('question')
+        question = self.xml.get_object('question')
         question.set_text(self.qanda[1])
         self.sublist = self.qanda[2:6]
         
@@ -73,9 +78,9 @@ class GameQuizScreen():
         
         ##assign the correct answer
         string=self.sublist[0]
-        a1 = self.xml.get_widget('a1')
+        a1 = self.xml.get_object('a1')
         a1.set_text( string.split('@')[0] );
-        button1= self.xml.get_widget('button1')
+        button1= self.xml.get_object('button1')
         if(string[0]=="*"):
             button1.connect("button_press_event", self.right0)
         else:
@@ -84,9 +89,9 @@ class GameQuizScreen():
         
          ##assign the wrong answers
         string=self.sublist[1]
-        a2 = self.xml.get_widget('a2')
+        a2 = self.xml.get_object('a2')
         a2.set_text( string.split('@')[0] );
-        button2= self.xml.get_widget('button2')
+        button2= self.xml.get_object('button2')
         #button2.connect("button_press_event", self.a2)
         if(string[0]=="*"):
             button2.connect("button_press_event", self.right1)
@@ -94,9 +99,9 @@ class GameQuizScreen():
             button2.connect("button_press_event", self.wrong1)
         
         string=self.sublist[2]
-        a3 = self.xml.get_widget('a3')
+        a3 = self.xml.get_object('a3')
         a3.set_text( string.split('@')[0] );
-        button3= self.xml.get_widget('button3')
+        button3= self.xml.get_object('button3')
         #button3.connect("button_press_event", self.a3)
         if(string[0]=="*"):
             button3.connect("button_press_event", self.right2)
@@ -104,9 +109,9 @@ class GameQuizScreen():
             button3.connect("button_press_event", self.wrong2)
         
         string=self.sublist[3]
-        a4 = self.xml.get_widget('a4')
+        a4 = self.xml.get_object('a4')
         a4.set_text( string.split('@')[0] );
-        button4= self.xml.get_widget('button4')
+        button4= self.xml.get_object('button4')
         #button4.connect("button_press_event", self.a4)
         
         if(string[0]=="*"):
@@ -127,69 +132,69 @@ class GameQuizScreen():
         
      
     def right0(self,widget,event):
-        answer_label=self.xml.get_widget('answer')
+        answer_label=self.xml.get_object('answer')
         string=self.sublist[0]
         answer_label.set_text(string.split('@')[1])
-        image=self.xml.get_widget('tick0')
+        image=self.xml.get_object('tick0')
         image.set_from_file("images/right.png");
         self.reset_icon(0);
         self.continue_button.set_sensitive(True);
     def right1(self,widget,event):
-        answer_label=self.xml.get_widget('answer')
+        answer_label=self.xml.get_object('answer')
         string=self.sublist[1]
         answer_label.set_text(string.split('@')[1])
-        image=self.xml.get_widget('tick1')
+        image=self.xml.get_object('tick1')
         image.set_from_file("images/right.png");
         self.reset_icon(1);
         self.continue_button.set_sensitive(True);
     def right2(self,widget,event):
-        answer_label=self.xml.get_widget('answer')
+        answer_label=self.xml.get_object('answer')
         string=self.sublist[2]
         answer_label.set_text(string.split('@')[1])
-        image=self.xml.get_widget('tick2')
+        image=self.xml.get_object('tick2')
         image.set_from_file("images/right.png");
         self.reset_icon(2);
         self.continue_button.set_sensitive(True);
     def right3(self,widget,event):
-        answer_label=self.xml.get_widget('answer')
+        answer_label=self.xml.get_object('answer')
         string=self.sublist[3]
         answer_label.set_text(string.split('@')[1])
-        image=self.xml.get_widget('tick3')
+        image=self.xml.get_object('tick3')
         image.set_from_file("images/right.png");
         self.reset_icon(3);
         self.continue_button.set_sensitive(True);
     def wrong0(self,widget,event):
-        answer_label=self.xml.get_widget('answer')
+        answer_label=self.xml.get_object('answer')
         string=self.sublist[0]
         answer_label.set_text(string.split('@')[1])
-        image=self.xml.get_widget('tick0')
+        image=self.xml.get_object('tick0')
         image.set_from_file("images/wrong.png");
         self.reset_icon(0);
         self.continue_button.set_sensitive(False);
     
     def wrong1(self,widget,event):
-        answer_label=self.xml.get_widget('answer')
+        answer_label=self.xml.get_object('answer')
         string=self.sublist[1]
         answer_label.set_text(string.split('@')[1])
-        image=self.xml.get_widget('tick1')
+        image=self.xml.get_object('tick1')
         image.set_from_file("images/wrong.png");
         self.reset_icon(1);
         self.continue_button.set_sensitive(False);
         
     def wrong2(self,widget,event):
-        answer_label=self.xml.get_widget('answer')
+        answer_label=self.xml.get_object('answer')
         string=self.sublist[2]
         answer_label.set_text(string.split('@')[1])
-        image=self.xml.get_widget('tick2')
+        image=self.xml.get_object('tick2')
         image.set_from_file("images/wrong.png");
         self.reset_icon(2);
         self.continue_button.set_sensitive(False);
         
     def wrong3(self,widget,event):
-        answer_label=self.xml.get_widget('answer')
+        answer_label=self.xml.get_object('answer')
         string=self.sublist[3]
         answer_label.set_text(string.split('@')[1])
-        image=self.xml.get_widget('tick3')
+        image=self.xml.get_object('tick3')
         image.set_from_file("images/wrong.png");
         self.reset_icon(3);
         self.continue_button.set_sensitive(False);
@@ -197,16 +202,16 @@ class GameQuizScreen():
     def reset_icon(self, index):
         
         if(index!=0):
-            image=self.xml.get_widget('tick0')
+            image=self.xml.get_object('tick0')
             image.set_from_file("images/question.png");
         if(index!=1):
-            image=self.xml.get_widget('tick1')
+            image=self.xml.get_object('tick1')
             image.set_from_file("images/question.png"); 
         if(index!=2):
-            image=self.xml.get_widget('tick2')
+            image=self.xml.get_object('tick2')
             image.set_from_file("images/question.png"); 
         if(index!=3):
-            image=self.xml.get_widget('tick3')
+            image=self.xml.get_object('tick3')
             image.set_from_file("images/question.png");  
   
         
