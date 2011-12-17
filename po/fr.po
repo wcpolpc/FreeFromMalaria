@@ -1,0 +1,82 @@
+# Spanish translations for FreeFromMalaria package.
+# Copyright (C) 2011 THE FreeFromMalaria'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the FreeFromMalaria package.
+# dev <olpc@worldclassproject.org.uk>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: FreeFromMalaria 3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-04-28 19:21+0100\n"
+"PO-Revision-Date: 2011-04-28 19:22+0100\n"
+"Last-Translator: dev <olpc@worldclassproject.org.uk>\n"
+"Language-Team: Spanish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: activity/activity.info:2
+msgid "FreeFromMalaria"
+msgstr "FreeFromMalaria"
+
+#: /data/workspace/FreeFromMalaria3/src/activity.py:33
+msgid "Free From Malaria"
+msgstr "Free From Malaria"
+
+#: /data/workspace/FreeFromMalaria3/src/activity.py:33
+msgid "Next Scene"
+msgstr "Scène suivante"
+
+#: /data/workspace/FreeFromMalaria3/src/activity.py:33
+msgid "Previous Scene"
+msgstr "Scène précédente"
+
+
+#: /data/workspace/FreeFromMalaria3/src/activity.py:33
+msgid "Current language:"
+msgstr "Langue courante:"
+
+#: /data/workspace/FreeFromMalaria3/src/activity.py:84
+msgid "Restart"
+msgstr "Recommencer"
+
+#: /data/workspace/FreeFromMalaria3/src/activity.py:93
+msgid "Enable/Disable Sound"
+msgstr "Activez/Deactivez sonores"
+
+#: /data/workspace/FreeFromMalaria3/src/activity.py:95
+msgid "Go to main menu"
+msgstr "Aller au menu principal"
+
+#: /data/workspace/FreeFromMalaria3/src/activity.py:140
+msgid "Restart The Story?"
+msgstr "Redémarrer l'histoire?"
+
+#: /data/workspace/FreeFromMalaria3/src/activity.py:141
+msgid "Are you sure you want to restart the story?"
+msgstr "Etes-vous sûr de vouloir redémarrer l'histoire?"
+
+#: /data/workspace/FreeFromMalaria3/src/activity.py:149
+msgid "Restart The Main Menu?"
+msgstr "Êtes-vous sûr de vouloir redémarrer l'histoire?"
+
+#: /data/workspace/FreeFromMalaria3/src/activity.py:150
+msgid "Are you sure you want to return to the main menu?"
+msgstr "Êtes-vous sûr de vouloir revenir au menu principal?"
+
+#: /data/workspace/FreeFromMalaria3/src/view/WelcomeScreen.py:52
+msgid "Options"
+msgstr "Choix"
+
+#: /data/workspace/FreeFromMalaria3/src/view/WelcomeScreen.py:57
+msgid "Play the Game"
+msgstr "Écouter l'histoire"
+
+#: /data/workspace/FreeFromMalaria3/src/view/WelcomeScreen.py:63
+msgid "Current language: "
+msgstr "La langue courante"
+
+#: /data/workspace/FreeFromMalaria3/src/view/WelcomeScreen.py:108
+msgid "Change the current language from "
+msgstr "Changer la langue courante à partir"

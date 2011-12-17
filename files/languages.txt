@@ -1,0 +1,4 @@
+English;en
+Spanish;es
+Swahili;sw
+French;fr

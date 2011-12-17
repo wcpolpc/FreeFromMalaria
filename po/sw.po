@@ -1,0 +1,80 @@
+# Swahili translations for FreeFromMalaria package.
+# Copyright (C) 2011 THE FreeFromMalaria'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the FreeFromMalaria package.
+# dev <olpc@worldclassproject.org.uk>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: FreeFromMalaria 3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-04-28 19:21+0100\n"
+"PO-Revision-Date: 2011-04-28 19:22+0100\n"
+"Last-Translator: dev <olpc@worldclassproject.org.uk>\n"
+"Language-Team: Swahili\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: activity/activity.info:2
+msgid "FreeFromMalaria"
+msgstr "FreeFromMalaria"
+
+#: /data/workspace/FreeFromMalaria3/src/activity.py:33
+msgid "Free From Malaria"
+msgstr "Free From Malaria"
+
+#: /data/workspace/FreeFromMalaria3/src/activity.py:33
+msgid "Current language:"
+msgstr "Lugha ya sasa:"
+
+#: /data/workspace/FreeFromMalaria3/src/activity.py:33
+msgid "Next Scene"
+msgstr "Eneo Ijayo"
+
+#: /data/workspace/FreeFromMalaria3/src/activity.py:33
+msgid "Previous Scene"
+msgstr "Awali Eneo"
+
+#: /data/workspace/FreeFromMalaria3/src/activity.py:84
+msgid "Restart"
+msgstr "Restart"
+
+#: /data/workspace/FreeFromMalaria3/src/activity.py:93
+msgid "Enable/Disable Sound"
+msgstr "kuanza/kuacha sauti"
+
+#: /data/workspace/FreeFromMalaria3/src/activity.py:95
+msgid "Go to main menu"
+msgstr "Kwenda kwa menu kuu"
+
+#: /data/workspace/FreeFromMalaria3/src/activity.py:140
+msgid "Restart The Story?"
+msgstr "Kuanza tena hadithi"
+
+#: /data/workspace/FreeFromMalaria3/src/activity.py:141
+msgid "Are you sure you want to restart the story?"
+msgstr "Una uhakika unataka Kuanza tena hadithi"
+
+#: /data/workspace/FreeFromMalaria3/src/activity.py:149
+msgid "Restart The Main Menu?"
+msgstr "Restart The Main Menu?"
+
+#: /data/workspace/FreeFromMalaria3/src/activity.py:150
+msgid "Are you sure you want to return to the main menu?"
+msgstr "Una uhakika unataka return to the Main Menu? "
+
+#: /data/workspace/FreeFromMalaria3/src/view/WelcomeScreen.py:52
+msgid "Options"
+msgstr "Chaguzi"
+
+#: /data/workspace/FreeFromMalaria3/src/view/WelcomeScreen.py:57
+msgid "Play the Game"
+msgstr "Kucheza michezo"
+
+#: /data/workspace/FreeFromMalaria3/src/view/WelcomeScreen.py:63
+msgid "Current language: "
+msgstr "Sasa lugha ya:"
+
+#: /data/workspace/FreeFromMalaria3/src/view/WelcomeScreen.py:108
+msgid "Change the current language from: "
+msgstr "Mabadiliko ya lugha ya sasa ya kutoka"

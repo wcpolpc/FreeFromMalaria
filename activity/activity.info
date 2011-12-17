@@ -1,0 +1,8 @@
+[Activity]
+name = FreeFromMalaria
+service_name = uk.org.worldclassproject.FreeFromMalaria
+class = activity.FreeFromMalariaActivity
+icon = mosquito
+activity_version = 4
+show_launcher = yes
+exec = sugar-activity activity.Activity
