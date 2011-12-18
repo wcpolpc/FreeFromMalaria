@@ -1,4 +1,9 @@
 *****************
+* Version 4.1a  *
+*****************
+Removal of libglade dependancies because of failing to start on some XO 1 and XO 1.5
+
+*****************
 * Version 3.0	*
 *****************
 Failed to start on some XO1 and XO1.5
