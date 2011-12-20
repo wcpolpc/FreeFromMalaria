@@ -1,4 +1,17 @@
 *****************
+* Version 4.2a	*
+*****************
+
+Fix for pygame mixer init problems- activity should not use sound or crash if pygame mixer failed.
+
+
+*****************
+* Version 4.1a	*
+*****************
+Failed to start on some XO1 and XO1.5 - removal or glade dependacy and addition of version number on welcome screen
+
+
+*****************
 * Version 3.0	*
 *****************
 Failed to start on some XO1 and XO1.5

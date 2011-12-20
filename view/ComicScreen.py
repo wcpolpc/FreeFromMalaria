@@ -138,6 +138,7 @@ class MyComicScreen():
 			if(pygame.mixer.get_busy()==True):
 					pygame.mixer.stop();
 					pygame.mixer.init(22050, -32, 2, 4096)
+			
 			s=pygame.mixer.Sound(self.sound)
 			s.set_volume(0.2)
 			channel = s.play()

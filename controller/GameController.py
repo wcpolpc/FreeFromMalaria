@@ -21,6 +21,7 @@ from view import WelcomeScreen
 from view import QuizScreen;
 import pygame;
 import os.path
+import sys
 class GlobalGameController:
 	'''
 	classdocs
@@ -42,8 +43,9 @@ class GlobalGameController:
 			print "SOUND INITIALIZED"
 			
 		except:
-			print "Warning:ERROR in SOUND"
-			self.sound_error = True;
+			print "Unexpected error:", sys.exc_info()[0]
+			print "Error:ERROR in SOUND"
+			self.sound = False;
 			
 		self.comic_index = 0;
 		self.current_game = "Welcome"

@@ -57,7 +57,7 @@ class GameWelcomeScreen():
         #Sound toggle button
         
         self.play_button=self.xml.get_object('versionlabel')
-        self.play_button.set_label('v 4.1a')
+        self.play_button.set_label('v 4.2a')
 
 
         
